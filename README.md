@@ -3,8 +3,11 @@
 Perhaps you have some resource that you would like to share between Django
 threads, e.g. a large file you would **rather not** load for each thread.
 
-(assuming that one-time loading is the expensive bit, not 
-accessing/processing). Maybe you will find this boilerplate useful too.
+Assuming that one-time loading is the expensive bit, not 
+accessing/processing; also, that we only care about 'reading' (writing would
+require fiddling around with locking). 
+
+Maybe you will find this boilerplate useful too.
 
 ## Setup
 ### Install Django & Celery
